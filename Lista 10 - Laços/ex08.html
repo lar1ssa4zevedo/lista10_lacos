@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex08</title>
+</head>
+<body>
+    <script>
+        //8 - Escreva um algoritmo para ler as notas da 1a. e 2a. avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
+
+        var n1 = parseFloat(prompt("Digite a primeira nota:"));
+        var n2 = parseFloat(prompt("Digite a segunda nota:"));
+        var media = (n1+n2)/2;
+
+        if(n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10){
+
+            while (n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10) {
+            alert("Digite apenas valores entre 0 e 10!");
+            var n1 = parseFloat(prompt("Tente novamente a primeira nota:"));
+            var n2 = parseFloat(prompt("Tente novamente a segunda nota:"));
+            var m = (n1+n2)/2;
+            alert("A média entre as notas foi de: " + m);
+            }
+        } 
+        else {
+            alert("A média entre as notas foi de: " + media);
+        }
+
+       
+
+    </script>
+</body>
+</html>
